@@ -1,12 +1,12 @@
 public class AfishaManager {
     public Movies [] movies=new Movies[0];
-public void save (Movies movies){
-    Movies [] tmp=new Movies[movies.length+1];
-    for (int i=0; i<movies.length;i++){
-        tmp [i]=movies[i];
+public void add (Movies movie){
+    Movies [] tmp=new Movies[movie.length+1];
+    for (int i=0; i<movie.length;i++){
+        tmp [i]=movie[i];
     }
-    tmp[tmp.length-1]=movies;
-    movies=tmp;
+    tmp[tmp.length-1]=movie;
+    this.movies=tmp;
 }
 
 }

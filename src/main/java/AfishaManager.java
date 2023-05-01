@@ -11,14 +11,16 @@ public class AfishaManager {
         this.limit = limit;
     }
 
-    public String [] getMovies (){
-        return movies;
 
+    public String[] getMovies() {
+        return movies;
     }
-    public  void setMovies(String [] newMovies){
-        movies=newMovies;
+
+    public void setMovies(String[] newMovies) {
+        movies = newMovies;
     }
-    public int getLimit(){
+
+    public int getLimit() {
         return limit;
     }
 

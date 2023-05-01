@@ -1,13 +1,28 @@
 public class AfishaManager {
     //   public Movies [] movies=new Movies[0];
-    public String[] movies = new String[0];
-    public int limit;
+    private String[] movies = new String[0];
+    private int limit;
 
     public AfishaManager() {
         this.limit = 5;
     }
 
     public AfishaManager(int limit) {
+        this.limit = limit;
+    }
+
+    public String [] getMovies (){
+        return movies;
+
+    }
+    public  void setMovies(String [] newMovies){
+        movies=newMovies;
+    }
+    public int getLimit(){
+        return limit;
+    }
+
+    public void setLimit(int limit) {
         this.limit = limit;
     }
 

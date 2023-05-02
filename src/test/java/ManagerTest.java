@@ -104,4 +104,28 @@ public class ManagerTest {
         Assertions.assertEquals(6, manager.getLimit());
     }
 
+    @Test
+    public void shouldFindLastIfLimitEqual() {
+        AfishaManager manager2 = new AfishaManager(3);
+        manager2.add("Movie 10");
+        manager2.add("Movie 20");
+        manager2.add("Movie 30");
+        String[] actual3 = manager2.findLast();
+        String[] expected3 = {"Movie 30", "Movie 20", "Movie 10"};
+        Assertions.assertArrayEquals(expected3, actual3);
+    }
+
+
+    @Test
+    public void shouldFindLastIfLimitMore() {
+        AfishaManager manager2 = new AfishaManager(2);
+        manager2.add("Movie 10");
+        manager2.add("Movie 20");
+        manager2.add("Movie 30");
+        String[] actual3 = manager2.findLast();
+        String[] expected3 = {"Movie 30", "Movie 20"};
+        Assertions.assertArrayEquals(expected3, actual3);
+    }
+
+
 }
